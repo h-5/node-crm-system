@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.w50{
+    width: 50px;
+}
+
+.w150{
+    width: 150px;
+}
+
+.w200{
+    width: 200px;
+}
+.box{
+    width: 800px;
+    margin: auto;
+    border: 2px solid green;
+}
+
+a,a:hover , a:active, a:visited, a:target{
+    text-decoration: none;
+    color: #000;
+}
+
+.link{
+    font-size: 16px;
+    display: block;
+    margin: 0 5px;
+
+}
+
+.link:hover{
+    color: green;
+    text-decoration: underline;
+}
+
+.head{
+    height: 35px;
+    line-height: 35px;
+    background: green;
+}
+
+.head span{
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.list{
+    clear: both;
+}
+.list li{
+    height: 35px;
+    line-height: 35px;
+}
+.list li span{
+    float: left;
+    text-align: center;
+}
+
+.list li span a{
+    text-decoration:underline;
+}
+
+input{
+    display: inline-block;
+    outline: none;
+
+}
+
+/*add page*/
+
+.box2{
+    width: 500px;
+    margin: 20px auto;
+    border: 2px solid green;
+}
+
+.box2 div{
+    height: 32px;
+    margin: 10px auto;
+
+}
+
+.box2 div span{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.list li span a{
+    margin: 0 10px;
+}
+
+.submit{
+    width: 200px;
+    height: 32px;
+    background: green;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
