@@ -48,15 +48,12 @@ const server=http.createServer((req,res)=>{
         if(con.length===0){
             con='[]';
         }
-
         con=JSON.parse(con);
-
         result={
             code:1,
             msg:'没有任何内容',
             data:null
         }
-
         if(con.length>0){
             result={
                 code:0,
@@ -64,26 +61,20 @@ const server=http.createServer((req,res)=>{
                 data:con
             }
         }
-
         res.writeHead(200,{
             'content-type':'application/json;charset=utf-8'
         });
-
         res.end(JSON.stringify(result));
         return;
-
     }
 
     //2.根据传递进来的客户id获取某一个具体的客户信息
     if(pathname==="/getInfo"){
         //获取客户端的id
         queryId=query.id;
-     
         con=fs.readFileSync('./json/custom.json','utf-8');
-     
         con.length===0?con='[]':null;
         con=JSON.parse(con);
-
         result={
             code:1,
             msg:'没有用户的id',
@@ -216,14 +207,11 @@ const server=http.createServer((req,res)=>{
         if(con.length===0){
             con='[]';
         }
-
-
         let str='';
 
         req.on('data',function (chunk) {
             str+=chunk;
         });
-
         req.on("end",function () {
             if(str.length==0){
                 res.writeHead(404,{
@@ -238,7 +226,6 @@ const server=http.createServer((req,res)=>{
             }
             //获取请求主体；
             let data=JSON.parse(str);
-
             //有一个标记，有没有修改
             let flag=false;
             //如果我通过请求传递进来的id与数组中的id全等的情况下，修改信息；
